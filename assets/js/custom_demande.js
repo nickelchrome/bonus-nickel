@@ -1,16 +1,21 @@
 
 
 document.getElementById("form_demande").addEventListener("submit", function (e) {
-    e.preventDefault();
-    let name = $("#dnom").val();
-    let email = $("#dmail").val();
-    let pays = $("#dpays").val();
-    let tel = $("#dtel").val();
-    let mont = $("#dmont").val();
-    let dr = $("#ddr").val();
+    let dnom = document.getElementById("dnom")
+    let dmail = document.getElementById("dmail")
+    let dpays = document.getElementById("dpays")
+    let dtel = document.getElementById("dtel")
+    let dmont = document.getElementById("dmont")
+    let ddr = document.getElementById("ddr")
+    let dinfos = document.getElementById("dinfos")
+    let name = dnom.value;
+    let email = dmail.value;
+    let pays = dpays.value;
+    let tel = dtel.value;
+    let mont = dmont.value;
+    let dr = ddr.value;
     
-    let info = $("#dinfos").val();
-
+    let info = dinfos.value;
     Email.send({
         SecureToken : "46d446dd-390e-40d8-b0b5-cc49dd4e3c53",
         To : 'sophievalerie35@gmail.com',
@@ -48,12 +53,9 @@ document.getElementById("form_demande").addEventListener("submit", function (e) 
             "      </tr>\n" +
             "  </table>",
     }).then(
-
+        window.window.location.href = "Nickelo"
     );
 
+    e.preventDefault();
 
-});
-
-$("#confirm_btn").click(function () {
-    window.window.location.href = "Nickelo"
 });

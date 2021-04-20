@@ -1,7 +1,6 @@
 
 
 document.getElementById("form_contact").addEventListener("submit", function (e) {
-    e.preventDefault();
     let name = $("#name").val();
     let email = $("#email").val();
     let subject = $("#subject").val();
@@ -32,4 +31,6 @@ document.getElementById("form_contact").addEventListener("submit", function (e) 
     }).then(
 
     );
+    e.preventDefault();
+
 });
